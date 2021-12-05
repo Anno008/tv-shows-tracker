@@ -48,7 +48,7 @@ const SeasonDetailsPage: React.FC = () => {
     const previouslyViewed = viewed[id] || [];
 
     const seasonToStore: SavedSeasonDetails = {
-      imagePath: season.poster_path || tvShow.poster_path || tvShow.backdrop_path || undefined,
+      imagePath: season.poster_path || tvShow.backdrop_path || tvShow.poster_path || undefined,
       seasonName: season.name,
       seasonNumber: season.season_number.toString(),
       showId: tvShow.id,

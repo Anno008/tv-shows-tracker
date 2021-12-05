@@ -69,7 +69,7 @@ const TvShowDetailsPage: React.FC = () => {
     const showToSave: SavedTvShow = {
       showId: tvShow.id,
       showName: tvShow.name,
-      imagePath: tvShow.poster_path || tvShow.backdrop_path
+      imagePath: tvShow.backdrop_path || tvShow.poster_path
     };
 
     setViewed({
