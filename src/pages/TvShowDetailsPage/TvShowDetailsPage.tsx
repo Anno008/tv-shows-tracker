@@ -42,11 +42,11 @@ const TvShowDetailsPage: React.FC = () => {
   useEffect(() => {
     getTvShowById(+tvShowId)
       .then(setTvShow)
-      .catch(e => toast.error(e.message));
+      .catch(e => toast.error(e.status_message));
     if (!userSessionData?.sessionId) return;
     getTvShowStatusById(+tvShowId, userSessionData.sessionId)
       .then(result => setIsFavorite(result.favorite))
-      .catch(e => toast.error(e.message));
+      .catch(e => toast.error(e.status_message));
   }, [tvShowId, userSessionData?.sessionId]);
 
   const genres = tvShow?.genres.map(g => g.name).join(", ");

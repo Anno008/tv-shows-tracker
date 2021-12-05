@@ -15,6 +15,7 @@ import PrivateRoute from "./PrivateRoute";
 import EpisodeDetailsPage from "~/pages/EpisodeDetailsPage";
 import FavoritesPage from "~/pages/FavoritesPage";
 import LoginPage from "~/pages/LoginPage";
+import PageNotFound from "~/pages/PageNotFound";
 import SeasonDetailsPage from "~/pages/SeasonDetailsPage";
 import TvShowDetailsPage from "~/pages/TvShowDetailsPage";
 import TvShowsHomePage from "~/pages/TvShowsHomePage";
@@ -29,6 +30,7 @@ const AppRoutes = (): JSX.Element => (
     <PrivateRoute path={seasonDetailsRoute} exact component={SeasonDetailsPage} />
     <PrivateRoute path={episodeDetailsRoute} exact component={EpisodeDetailsPage} />
     <Route path={loginRoute} component={LoginPage} />
+    <Route component={PageNotFound} />
   </Switch>
 );
 export default AppRoutes;

@@ -29,13 +29,13 @@ const EpisodeDetailsPage: React.FC = () => {
   useEffect(() => {
     getEpisodeById(+tvShowId, +seasonNumber, +episodeNumber)
       .then(setEpisode)
-      .catch(e => toast.error(e.message));
+      .catch(e => toast.error(e.status_message));
     getTvShowById(+tvShowId)
       .then(setTvShow)
-      .catch(e => toast.error(e.message));
+      .catch(e => toast.error(e.status_message));
     getSeasonById(+tvShowId, +seasonNumber)
       .then(setSeason)
-      .catch(e => toast.error(e.message));
+      .catch(e => toast.error(e.status_message));
   }, [episodeNumber, seasonNumber, tvShowId]);
 
   const handleAddToViewed = () => {

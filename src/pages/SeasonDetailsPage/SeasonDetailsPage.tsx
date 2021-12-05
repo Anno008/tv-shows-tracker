@@ -36,10 +36,10 @@ const SeasonDetailsPage: React.FC = () => {
   useEffect(() => {
     getTvShowById(+tvShowId)
       .then(setTvShow)
-      .catch(e => toast.error(e.message));
+      .catch(e => toast.error(e.status_message));
     getSeasonById(+tvShowId, +sessionId)
       .then(setSeason)
-      .catch(e => toast.error(e.message));
+      .catch(e => toast.error(e.status_message));
   }, [sessionId, tvShowId]);
 
   const handleAddToViewed = () => {

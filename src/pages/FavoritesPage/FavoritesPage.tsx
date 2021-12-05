@@ -26,7 +26,7 @@ const FavoritesPage = (): JSX.Element => {
       .then(newTvShows =>
         setTvShows(prev => (page === 1 ? newTvShows : mergeTvShowsData(newTvShows, prev?.results)))
       )
-      .catch(e => toast.error(e.message))
+      .catch(e => toast.error(e.status_message))
       .finally(() => setIsLoading(false));
   }, [page, userSessionData?.sessionId, userSessionData?.userInfo?.id]);
 
